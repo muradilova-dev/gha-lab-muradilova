@@ -1,0 +1,14 @@
+name: Manual
+on: workflow_dispatch
+env:
+  COURSE: DevOps
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Variable
+        run: echo "Course: $COURSE"
+      - name: Who ran it
+        run: echo "Started by: ${{ github.actor }}"
+      - name: Secret
+        run: echo "Secret: ${{ secrets.MY_SECRET }}"
