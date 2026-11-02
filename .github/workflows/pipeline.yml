@@ -13,6 +13,7 @@ jobs:
           path: report.txt
 
   show:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get file
